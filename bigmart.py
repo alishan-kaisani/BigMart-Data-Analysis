@@ -10,5 +10,7 @@ def bigmart():
 print(set(df["Outlet_Establishment_Year"]))
 plt.bar(df["Outlet_Establishment_Year"], df["Item_Outlet_Sales"], align="center")
 
+print(set(df[df["Outlet_Establishment_Year"].isnull()]["Outlet_Identifier"].values))
+
 if __name__ == "__main__":
 	bigmart()
