@@ -7,12 +7,8 @@ def bigmart():
 
 	data = pd.read_csv("train-clean.csv")
 
-# Bar chart for Item_Outlet_Sales vs. Outlet_Establihsment_Year
-
-print(set(df["Outlet_Establishment_Year"]))
-plt.bar(df["Outlet_Establishment_Year"], df["Item_Outlet_Sales"], align="center")
-
-print(set(df[df["Outlet_Establishment_Year"].isnull()]["Outlet_Identifier"].values))
+	print(data[data["Item_Type"] = "Starchy_Foods"])
+	#This will give you all rows where the type is starchy foods
 
 # Find the mean of Item_Weight for each Item_Type
 type_weight_dict = {}
