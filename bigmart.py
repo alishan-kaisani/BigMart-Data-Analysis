@@ -13,7 +13,8 @@ def bigmart():
 # Find the mean of Item_Weight for each Item_Type
 type_weight_dict = {}
 for itemtype in set(df["Item_Type"]):
-	type_weight_dict[itemtype] = mean([x for x in df["Item_Weight"] if df["Item_Type"] == itemtype])
+	item_df = data[data["Item_Type"] = itemtype]
+	type_weight_dict[itemtype] = item_df["Item_Weight"].mean()
 print(type_weight_dict)
 
 if __name__ == "__main__":
